@@ -14,3 +14,7 @@ For educational use only, don't use it publicly
 4. Upload the PHP file and replace the **localhost** with your **server**
 5. Save the code and the file as **macro enabled**
 6. Read the cookies file using any sqlite software like **DB browser for SQLite**
+
+# Example
+
+![](https://github.com/HitmanAlharbi/Steal-firefox-cookies-VBA-macro/blob/main/example.gif?raw=true)
